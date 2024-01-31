@@ -71,7 +71,7 @@ spec:
         - name: source
           workspace: pipeline-workspace
       taskRef:
-        name: buildnah
+        name: buildah
         kind: ClusterTask
       params:
       - name: IMAGE
@@ -79,3 +79,5 @@ spec:
       runAfter:
         - tests
         - lint
+
+
