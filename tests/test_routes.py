@@ -141,8 +141,8 @@ class TestAccountService(TestCase):
         resp = self.client.get(f"{BASE_URL}/0")
         self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
 
-    def test_read_an_account(self):
-        """It should update an existing account"""
+    def test_update_account(self):
+        """It should Update an existing Account"""
         # create an Account to update
         test_account = AccountFactory()
         resp = self.client.post(BASE_URL, json=test_account.serialize())
